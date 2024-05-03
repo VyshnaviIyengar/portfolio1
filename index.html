@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-de84872cd8" crossorigin="anonymous" />
+    <style>
+        /* CSS for the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            /* Style the navigation links */
+            .sidebar a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+                /* Change color on hover */
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        /* Close button */
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <!-- Close button -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Navigation links -->
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#education">Education</a>
+        <button onclick="downloadResume()" id="button">Download Resume</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+            <h1>Welcome to my Portfolio!!!</h1>
+            <img src="vyshnavi.jpg" alt="John Doe" class="profile-img">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <h2>Vyshnavi Iyengar</h2>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#education">Education</a></li>
+
+                    <li><button onclick="downloadResume()" id="button">Download Resume</button></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate and driven computer science student with a strong foundation in programming, algorithms, and problem-solving.Throughout my academic journey, I have actively engaged in various coding projects, both independently and collaboratively, honing my skills in languages such as Java, Python, and JavaScript. I thrive in dynamic environments where I can apply my creativity and analytical thinking to develop innovative solutions to complex problems. With a keen interest in emerging technologies such as artificial intelligence and machine learning, I am eager to contribute my skills and knowledge to projects that push the boundaries of what is possible in the field of computer science</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Online Library System Management</h3>
+                <p>
+                    Developed online library management system database,
+                    integrating functionalities like member and book management, transactions (borrowing, returning), fines,
+                    and reporting.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Handwriting Recognition System Using Deep Learning</h3>
+                <p>
+                    Built a deep learning model (CNN) to
+                    recognize hand-drawn digits and characters from user-created Paint images. Achieved 99% accuracy,
+                    showcasing experience in data handling and model training.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Placement Management System Using Spring Boot</h3>
+                <p>
+                    Developed web-based placement module using
+                    Spring Boot for managing student-company interactions, applications, and placements.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <h3>Dr.Ambedkar Institute Of Technology</h3>
+                <p>Degree: Bachelor of Science in Computer Science</p>
+                <p>Year of Graduation: 2024</p>
+                <img src="college.jpg" alt="College" />
+            </div>
+            <!-- Add more education entries as needed -->
+            <div class="education-entry">
+                <h3>Narayana PU College</h3>
+
+                <p>Year of Graduation: 2020</p>
+                <img src="pu.jpg" alt="College" />
+            </div>
+            <div class="education-entry">
+                <h3>Narayana E-Techno School</h3>
+
+                <p>Year of Graduation: 2018</p>
+                <img src="school.jpg" alt="College" />
+            </div>
+        </div>
+    </section>
+    <section id="resume">
+        <div class="container">
+            <h2>Download Resume</h2>
+            <p>You can download my resume below:</p>
+            <a href="resume.pdf" download="Vyshnavi_Resume.pdf" class="resume-download">Download Resume</a>
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/vyshnavi__iyengar" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/vyshnavi.iyengar.77" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/vyshnavi-iyengar-046068257" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+
+            </div>
+            <p>&copy; 2024 Vyshnavi Iyengar</p>
+        </div>
+    </footer>
+
+
+    <script src="script1.js"></script>
+    <script src="https://kit.fontawesome.com/de84872cd8.js" crossorigin="anonymous"></script>
+    <script>
+        // Open and close sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "60%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+</html>
